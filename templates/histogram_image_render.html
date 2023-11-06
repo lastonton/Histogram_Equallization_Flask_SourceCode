@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering Dynamic Images Using Flask</title>
+</head>
+<body>
+<form action="{{ url_for('histogram') }}" enctype="multipart/form-data" method="POST">
+    <input name="img" type="file"/>
+    <input type="submit"/>
+</form>
+
+{% if img_show %}
+<h1>Original GrayScale</h1>
+<img src="{{original_pic}}">
+{% else %}
+<h1></h1>
+{% endif %}
+
+{% if img_show %}
+<h1>Rendered Image</h1>
+<img src="{{img_show}}">
+{% else %}
+<h1>Image will be render here...</h1>
+{% endif %}
+
+{% if img_show %}
+<h1>Before</h1>
+<img src="{{histogram_before_show}}">
+{% else %}
+<h1></h1>
+{% endif %}
+
+{% if img_show %}
+<h1>After</h1>
+<img src="{{histogram_after_show}}">
+{% else %}
+<h1></h1>
+{% endif %}
+</body>
+</html>
