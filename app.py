@@ -60,6 +60,7 @@ def histogram():
     importlib.reload(mpl); importlib.reload(plt); importlib.reload(sns)
     sns.reset_orig()
     if request.method == 'POST':
+        slider_value = float(request.form['slider_value'])
         file = request.files['img']
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD'], filename))
@@ -90,7 +91,7 @@ def histogram():
 
         cdf_m = np.ma.masked_equal(cdf, 0)
 
-        num_cdf_m = (cdf_m-cdf_m.min())*255
+        num_cdf_m = (cdf_m-cdf_m.min())*slider_value
         den_cdf_m = (cdf_m.max() - cdf_m.min())
         cdf_m = num_cdf_m/den_cdf_m
 
@@ -117,3 +118,4 @@ def histogram():
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
     run_simple('localhost', 5000, app)
+
