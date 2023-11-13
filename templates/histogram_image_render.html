@@ -85,11 +85,12 @@
         <label for="img">Select an Image:</label>
         <input name="img" type="file" accept="image/*" required />
         <br>
-        <input type="submit" value="Upload and Render">
         <div class="slider-container">
             <input type="range" min="0" max="255" value="255" class="slider" name="slider_value">
             <label for="1" id="label">255</label>
         </div>
+        <input type="submit" value="Upload and Render">
+        
     </form>
 
     {% if img_show %}
