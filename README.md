@@ -9,6 +9,8 @@ Các tính năng chính của dự án bao gồm:
 - Hỗ trợ cân bằng biểu đồ toàn cục cho hình ảnh xám.
 - Cung cấp một số tùy chọn để điều chỉnh kết quả cân bằng biểu đồ.
 - Được viết bằng Python và được tối ưu hóa để sử dụng hiệu quả.
+![image](https://github.com/lastonton/Histogram_Equallization_Flask_SourceCode/assets/138580872/50e2f25a-b713-471d-b036-049ed213fcae)
+
 
 ## Hướng dẫn sử dụng
 
@@ -42,6 +44,8 @@ Các tính năng chính của dự án bao gồm:
 
 1. Khởi động websie và truy cập vào đường dẫn http://localhost:5000
 2. Nhấn chọn Generate Histogram để vào giao diện chính xử lý cân bằng mức xám
+![image](https://github.com/lastonton/Histogram_Equallization_Flask_SourceCode/assets/138580872/ca15dd10-f49e-4ccc-92a7-1936f179d39a)
+
 3. Nhấn chọn Choose File và chọn hình ảnh cần xử lý
 4. Kéo thanh Slider bên dưới hình đã qua xử lý để chọn mức sáng phù hợp với nhu cầu (mặc định là 255)
 5. Nhấn chọn Upload and Render và chờ hệ thống xử lý
